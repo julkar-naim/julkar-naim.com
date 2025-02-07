@@ -1,7 +1,7 @@
 +++
 title = 'The Law of Demeter in Object-Oriented Programming'
 date = 2025-02-07T12:31:46+06:00
-draft = true
+draft = false
 tags = ["OOP", "design-patterns"]
 categories = ["Design Patterns"]
 +++
