@@ -1,4 +1,4 @@
 baseURL = 'https://julkar-naim.com'
 languageCode = 'en-us'
 title = 'JN'
-theme = 'ananke'
+theme = 'revise'
