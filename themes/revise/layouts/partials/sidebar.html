@@ -1,0 +1,65 @@
+<aside class="sidebar">
+    <div class="profile-card">
+        {{ $profileImage := resources.Get "img/siteProfileImage.jpeg" }}
+        <img src="{{ $profileImage.Permalink }}" alt="Profile" />
+        <h3>Julkar Naim</h3>
+        <p>Software Engineer</p>
+        <p>
+            at
+            <a
+                    href="https://brainstation-23.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                Brain Station 23 PLC
+            </a>
+        </p>
+        <div class="social-links">
+            <a
+                    href="https://linkedin.com/in/your-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+            >
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+                    href="https://github.com/your-username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+            >
+                <i class="fab fa-github"></i>
+            </a>
+            <a
+                    href="https://leetcode.com/your-username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+            >
+                <i class="fas fa-code"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="categories-card">
+        <h3>Categories</h3>
+        <ul>
+            {{ range $categoryName, $category := .Site.Taxonomies.categories }}
+                <li>
+                    <a href="{{ $category.Page.RelPermalink }}" class="category-link">{{ $categoryName | title }}</a>
+                </li>
+            {{end}}
+        </ul>
+    </div>
+
+    <div class="tags-card">
+        <h3>Tags</h3>
+        <div class="tag-list">
+            {{ range $tagName, $tag := .Site.Taxonomies.tags }}
+                <a href="{{ $tag.Page.RelPermalink }}" class="tag">{{ $tagName }}</a>
+            {{end}}
+        </div>
+    </div>
+</aside>

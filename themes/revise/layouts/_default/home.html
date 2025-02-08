@@ -1,11 +1,3 @@
-{{/*{{ define "main" }}*/}}
-{{/*  {{ .Content }}*/}}
-{{/*  {{ range site.RegularPages }}*/}}
-{{/*    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>*/}}
-{{/*    {{ .Summary }}*/}}
-{{/*  {{ end }}*/}}
-{{/*{{ end }}*/}}
-
 {{ define "main" }}
 
   <div class="blog-layout">
@@ -26,73 +18,8 @@
       {{ end }}
     </div>
 
+    {{ partial "sidebar.html" . }}
 
-    <aside class="sidebar">
-      <div class="profile-card">
-        {{ $profileImage := resources.Get "img/siteProfileImage.jpeg" }}
-        <img src="{{ $profileImage.Permalink }}" alt="Profile" />
-        <h3>Julkar Naim</h3>
-        <p>Software Engineer</p>
-        <p>
-          at
-          <a
-                  href="https://brainstation-23.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-          >
-            Brain Station 23 PLC
-          </a>
-        </p>
-        <div class="social-links">
-          <a
-                  href="https://linkedin.com/in/your-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-link"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-                  href="https://github.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-link"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-                  href="https://leetcode.com/your-username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-link"
-          >
-            <i class="fas fa-code"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="categories-card">
-        <h3>Categories</h3>
-        <ul>
-          <li>Web Development</li>
-          <li>JavaScript</li>
-          <li>CSS</li>
-          <li>Performance</li>
-        </ul>
-      </div>
-
-      <div class="tags-card">
-        <h3>Tags</h3>
-        <div class="tag-list">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">React</span>
-          <span class="tag">Vue</span>
-          <span class="tag">Node.js</span>
-        </div>
-      </div>
-    </aside>
   </div>
 
 {{ end }}
