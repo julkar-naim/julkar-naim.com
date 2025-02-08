@@ -1,17 +1,55 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="en">
 <head>
-  {{ partial "head.html" . }}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ .Title }}</title>
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+  />
+
+  {{ $baseStyle := resources.Get "css/base.css" }}
+  <link rel="stylesheet" href="{{ $baseStyle.Permalink }}" media="screen">
+
+  {{ $baseScript := resources.Get "js/base.js" }}
+  <script src="{{ $baseScript.Permalink }}" type="text/javascript" defer></script>
+
 </head>
-<body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+
+
+
+<body class="blog-listing">
+<header>
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <h1>JN</h1>
+        </a>
+      </div>
+      <button id="darkModeToggle" class="dark-mode-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+
+<footer>
+  <div class="footer-content">
+    <p class="copyright">
+      &copy; 2024 Julkar Naim. All Rights Reserved
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
