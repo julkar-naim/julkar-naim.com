@@ -12,8 +12,12 @@
           rel="stylesheet"
   />
 
+  {{ block "css" . }}{{ end }}
+
   {{ $baseStyle := resources.Get "css/base.css" }}
   <link rel="stylesheet" href="{{ $baseStyle.Permalink }}" media="screen">
+
+  {{ block "js" . }}{{ end }}
 
   {{ $baseScript := resources.Get "js/base.js" }}
   <script src="{{ $baseScript.Permalink }}" type="text/javascript" defer></script>
@@ -46,7 +50,7 @@
 <footer>
   <div class="footer-content">
     <p class="copyright">
-      &copy; 2024 Julkar Naim. All Rights Reserved
+      &copy; {{ now.Year }} Julkar Naim. All Rights Reserved
     </p>
   </div>
 </footer>

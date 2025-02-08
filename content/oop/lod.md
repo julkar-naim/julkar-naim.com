@@ -2,11 +2,10 @@
 title = 'Break Law of Demeter Gracefully In Java'
 date = 2025-02-07T12:31:46+06:00
 draft = false
-tags = ["OOP", "design-patterns"]
-categories = ["Design Patterns"]
+tags = ["OOP", "Java"]
+categories = ["Object Oriented Programming"]
 +++
 
-## What is Law of Demeter
 The Law of Demeter (LoD), or Principle of Least Knowledge, is a design guideline in object-oriented programming that promotes loose coupling. It states that an object should only interact with its immediate collaborators, avoiding method chains (e.g., **obj.getA().getB().getC()**). Following LoD improves encapsulation, maintainability, and modularity. Read more about [Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter).
 
 Let's be honest, often times we have to break the Law of Demeter. In this article, we will discuss how to break the Law of Demeter gracefully in Java.

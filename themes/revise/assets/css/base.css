@@ -20,7 +20,7 @@ body {
 }
 
 /* Link Styles */
-.link {
+a {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
