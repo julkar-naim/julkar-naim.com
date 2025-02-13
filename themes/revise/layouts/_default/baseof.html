@@ -1,59 +1,62 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ .Title }}</title>
-  <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  />
-  <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-  />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ .Title }}</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-  {{ block "css" . }}{{ end }}
+        {{ block "css" . }}{{ end }}
 
-  {{ $baseStyle := resources.Get "css/base.css" }}
-  <link rel="stylesheet" href="{{ $baseStyle.Permalink }}" media="screen">
+        {{ $baseStyle := resources.Get "css/base.css" }}
+        <link
+            rel="stylesheet"
+            href="{{ $baseStyle.Permalink }}"
+            media="screen"
+        />
 
-  {{ block "js" . }}{{ end }}
+        {{ block "js" . }}{{ end }}
 
-  {{ $baseScript := resources.Get "js/base.js" }}
-  <script src="{{ $baseScript.Permalink }}" type="text/javascript" defer></script>
+        {{ $baseScript := resources.Get "js/base.js" }}
+        <script
+            src="{{ $baseScript.Permalink }}"
+            type="text/javascript"
+            defer
+        ></script>
+    </head>
 
-</head>
+    <body>
+        <header>
+            <nav id="navbar" class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="/" class="logo-link">
+                            <h1>{{ .Site.Params.logoText }}</h1>
+                        </a>
+                    </div>
+                    <button id="darkModeToggle" class="dark-mode-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
 
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
 
-
-<body>
-<header>
-  <nav id="navbar" class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="/" class="logo-link">
-          <h1>JN</h1>
-        </a>
-      </div>
-      <button id="darkModeToggle" class="dark-mode-btn">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-
-<main>
-  {{ block "main" . }}{{ end }}
-</main>
-
-
-<footer>
-  <div class="footer-content">
-    <p class="copyright">
-      &copy; {{ now.Year }} Julkar Naim. All Rights Reserved
-    </p>
-  </div>
-</footer>
-
-</body>
+        <footer>
+            <div class="footer-content">
+                <p class="copyright">
+                    &copy; {{ now.Year }} Julkar Naim. All Rights Reserved
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>

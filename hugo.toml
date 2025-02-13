@@ -1,4 +1,18 @@
 baseURL = 'https://julkar-naim.com'
 languageCode = 'en-us'
-title = 'JN'
+title = "Julkar Naim's Blog"
 theme = 'revise'
+description = "Personal Blog"
+
+[params]
+logoText = "JN"
+owner = "Julkar Naim"
+designation = "Software Engineer"
+profileImage = "img/siteProfileImage.jpeg"
+email = "julkar.naim@gmail.com"
+companyName = "Brain Station 23"
+companyUrl = "https://www.brainstation-23.com"
+
+linkedin = "julkar-naim-9a085618a"
+github = "julkar-naim"
+leetcode = "mznaimcse"
