@@ -1,7 +1,7 @@
 +++
 title = 'Show/hide page properties tab in dynamic template pages based on template name'
 date = 2025-02-17T23:49:10+06:00
-draft = true
+draft = false
 categories = ["AEM - Adobe Experience Manager"]
 tags = ["AEM"]
 +++
