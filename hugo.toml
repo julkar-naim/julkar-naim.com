@@ -4,6 +4,10 @@ title = "Julkar Naim's Blog"
 theme = 'revise'
 description = "Personal Blog"
 
+[markup]
+  [markup.highlight]
+    style = 'doom-one'
+
 [services]
 [services.googleAnalytics]
 id = 'G-M6DJVZ20SY'
