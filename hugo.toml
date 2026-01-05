@@ -1,26 +1,57 @@
 baseURL = 'https://julkar-naim.com'
 languageCode = 'en-us'
 title = "Julkar Naim's Blog"
-theme = 'revise'
 description = "Personal Blog"
 
-[markup]
-  [markup.highlight]
-    style = 'doom-one'
 
-[services]
-[services.googleAnalytics]
-id = 'G-M6DJVZ20SY'
+
+[module]
+  [[module.imports]]
+    path = "github.com/dillonzq/LoveIt"
+
+[markup.highlight]
+style = 'doom-one'
+
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
 
 [params]
-logoText = "JN"
 owner = "Julkar Naim"
 designation = "Software Engineer"
 profileImage = "img/siteProfileImage.jpeg"
-email = "julkar.naim.cse@gmail.com"
 companyName = "Brain Station 23"
 companyUrl = "https://www.brainstation-23.com"
 
-linkedin = "julkar-naim-9a085618a"
-github = "julkar-naim"
-leetcode = "mznaimcse"
+[params.home.profile]
+typeit = false
+subtitle = ""
+
+[params.social]
+Linkedin = "julkar-naim-9a085618a"
+Github = "julkar-naim"
+Email = "julkar.naim.cse@gmail.com"
+LeetCode = "mznaimcse"
+
+[params.header.title]
+name = "JN"
+
+# Author config
+[params.author]
+name = "Julkar Naim"
+
+
+[params.page.toc]
+enable = true
+
+[params.analytics.google]
+id = 'G-M6DJVZ20SY'
